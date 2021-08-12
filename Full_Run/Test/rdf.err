@@ -1,0 +1,5 @@
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/usr/local/bin/rdf.py", line 1181, in <module>
+    raise MTE.GeneralError
+MTException.GeneralError

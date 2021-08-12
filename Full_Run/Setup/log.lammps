@@ -1,0 +1,30 @@
+LAMMPS (9 Oct 2020)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/lammps-patch_9Oct2020/src/comm.cpp:94)
+  using 1 OpenMP thread(s) per MPI task
+processors 1 1 1
+units real
+atom_style atomic
+
+region box block 0 40 0 40 0 40
+create_box 1 box
+Created orthogonal box = (0.0000000 0.0000000 0.0000000) to (40.000000 40.000000 40.000000)
+  1 by 1 by 1 MPI processor grid
+create_atoms 1 random 20 2352 box
+Created 20 atoms
+  create_atoms CPU = 0.000 seconds
+mass 1 23
+
+pair_style table linear 1000
+pair_coeff 1 1 target_potential.Na_Na.table Na_Na
+WARNING: 1221 of 2501 force values in table Na_Na are inconsistent with -dE/dr.
+  Should only be flagged at inflection points (src/lammps-patch_9Oct2020/src/pair_table.cpp:461)
+
+velocity all create 0.5 157
+
+neighbor 0.5 bin
+neigh_modify every 20 delay 0 check no
+
+fix 1 all nvt temp 300 300 100
+dump id all xtc 100 NaNa.xtc
+ERROR: Unrecognized dump style 'xtc' is part of the MISC package which is not enabled in this LAMMPS binary. (src/lammps-patch_9Oct2020/src/output.cpp:572)
+Last command: dump id all xtc 100 NaNa.xtc

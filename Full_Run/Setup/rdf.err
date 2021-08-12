@@ -1,0 +1,21 @@
+ERROR:root:Got exception on main handler
+Traceback (most recent call last):
+  File "/mnt/c/users/kevin/documents/Project/magic-3/MagicTools/Trajectory.py", line 164, in Connect
+    self.trj = mdtraj.open(self.file)
+  File "/opt/miniconda3/lib/python3.8/site-packages/mdtraj/core/trajectory.py", line 258, in open
+    return loader(filename, mode=mode, force_overwrite=force_overwrite, **kwargs)
+  File "mdtraj/formats/xtc/xtc.pyx", line 255, in mdtraj.formats.xtc.XTCTrajectoryFile.__cinit__
+OSError: Malformed XTC file. Number of atoms <= 0. Are you sure this is a valid GROMACS xtc file?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/rdf.py", line 1190, in <module>
+    calculator.Calculate(smooth=True, trim=trim, nProc=np_) #, tolerance=(1.0e-3, 1.0e-5))
+  File "/usr/local/bin/rdf.py", line 1073, in Calculate
+    self.RDFs_Accumulate()
+  File "/usr/local/bin/rdf.py", line 941, in RDFs_Accumulate
+    self.Trajectory.Connect(restart=True)
+  File "/mnt/c/users/kevin/documents/Project/magic-3/MagicTools/Trajectory.py", line 167, in Connect
+    raise MTE.TrajError('unable to open trajectory file:' + self.file)
+MTException.TrajError: unable to open trajectory file:NaNa.xtc

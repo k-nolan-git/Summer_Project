@@ -1,0 +1,23 @@
+processors 1 1 1
+units real
+atom_style atomic
+
+region box block 0 40 0 40 0 40
+create_box 1 box
+create_atoms 1 random 20 2352 box
+mass 1 23
+
+pair_style table linear 1000
+pair_coeff 1 1 predpotential.Na_Na.table Na_Na
+
+velocity all create 0.5 157
+
+neighbor 0.5 bin
+neigh_modify every 20 delay 0 check no 
+
+fix 1 all nvt temp 300 300 100
+dump id all xtc 100 pred.xtc
+
+timestep 1
+
+run 1000000

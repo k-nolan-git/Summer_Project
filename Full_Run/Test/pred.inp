@@ -1,0 +1,29 @@
+&Parameters
+ TrajFile = pred.xtc
+ NMType = 1
+ NameMType = Na+.CG,
+ NMolMType = 20,
+ NFBEG = 1,
+ NFEND = 1,
+ ISTEP = 1, 
+ OutputFile = pred.rdf
+ RMaxNB = 15.
+ RMaxB =10.0
+ ResolNB =0.05
+ ResolB=0.02
+ ResolA=1.0
+&ENDParameters
+
+&CGTypes
+Na: Na
+&EndCGTypes
+
+&RDFsNB
+Add: all
+&EndRDFsNB
+
+&RDFsB
+&EndRDFsB
+
+&RDFsA
+&EndRDFsA
