@@ -12,35 +12,40 @@ File Types:
 *.table LAMMPS potential file
 *.xtc LAMMPS trajectory file
 
-/LAMMPS_Inputs
+/LAMMPS_Inputs/
 Contains the *.in input files used to run the simulations to generate the training data
 
-/LAMMPS_Potentials
+/LAMMPS_Potentials/
 Contains the *.table potential files used to run the simulations to generate the training data
 
-/LAMMPS_Trajectories
+/LAMMPS_Trajectories/
 Contains the *.xtc trajectory files from the simulations run to generate the training data
 
-/Magic_Potentials
+/Magic_Potentials/
 Contains the *.pot potential files used to run the simulations to generate the training data
 Used as the outputs during the training of the network
 
-/RDF_Inputs
+/RDF_Inputs/
 Contains the *.inp input files used to generate RDFs for training from the LAMMPS trajectories
 
-/RDFs
+/RDFs/
 Contains the *.rdf RDF files generated from the LAMMPS trajectories
 Used as the inputs during the training of the network
 
-/Setup
+/Setup/
 Contains files used to run initial simulation and generate initial RDFs. Potential is taken from
 MagiC Tutorial 1 (Na-Cl)
 
-/Test
+/Test/
 Contains the final output potential as well as files from simulation using that potential
 
 /Model<>
 Each contains a trained network, with Model6 having the best performance
 
-/Full_Run.ipynb
+Full_Run.ipynb
 Contains complete worked example
+
+Project_Summary.pdf
+Contains brief overall summary of how the methodology works, as well as some results, comments and areas
+of possible improvement
+
