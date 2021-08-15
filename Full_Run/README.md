@@ -11,6 +11,7 @@ File Types:
 *.in LAMMPS input file
 *.table LAMMPS potential file
 *.xtc LAMMPS trajectory file
+*.png image files containing graphs
 
 /LAMMPS_Inputs/
 Contains the *.in input files used to run the simulations to generate the training data
@@ -39,13 +40,10 @@ MagiC Tutorial 1 (Na-Cl)
 /Test/
 Contains the final output potential as well as files from simulation using that potential
 
-/Model<>
-Each contains a trained network, with Model6 having the best performance
+/Model<>/
+Each contains a trained network, with Model7 having the best performance
 
 Full_Run.ipynb
 Contains complete worked example
 
-Project_Summary.pdf
-Contains brief overall summary of how the methodology works, as well as some results, comments and areas
-of possible improvement
-
+See Summer_Project/Project_Summary.pdf for overview on how the methodolgy works

@@ -1,8 +1,8 @@
 # Summer_Project
 Contains code and DNN models for summer research project on Deep Learning and
- the Coarse Graining of Molecular Systems.
+the Coarse Graining of Molecular Systems.
 
-/Summer_Project_Summary 
+Project_Summary.pdf 
 Contains overview of the project and brief summary of results
 
 /Full_Run
